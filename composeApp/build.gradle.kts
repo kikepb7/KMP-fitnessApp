@@ -51,6 +51,9 @@ kotlin {
             implementation(libs.voyager.tabNavigator)
             implementation(libs.voyager.bottomSheetNavigator)
             implementation(libs.voyager.transitions)
+
+            // Data Persistence
+            implementation(libs.settings)
         }
         desktopMain.dependencies {
             implementation(compose.desktop.currentOs)

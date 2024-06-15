@@ -19,6 +19,7 @@ import cafe.adriel.voyager.navigator.Navigator
 import cafe.adriel.voyager.transitions.FadeTransition
 import navigation.bottombar.BottomBarScreen
 import org.jetbrains.compose.ui.tooling.preview.Preview
+import settings.ProfileScreen
 
 @Composable
 @Preview
@@ -58,6 +59,16 @@ class MainScreen : Screen {
                 }
             ) {
                 Text("BottomBar")
+            }
+
+            Spacer(modifier = Modifier.height(16.dp))
+
+            Button(
+                onClick = {
+                    navigator?.push(item = ProfileScreen())
+                }
+            ) {
+                Text("Persistence navigation")
             }
         }
     }

@@ -15,6 +15,7 @@ junit = "4.13.2"
 kotlin = "2.0.0"
 voyager = "1.1.0-beta02"
 animationAndroid = "1.6.8"
+settings-multiplatform = "1.1.1"
 
 [libraries]
 kotlin-test = { module = "org.jetbrains.kotlin:kotlin-test", version.ref = "kotlin" }
@@ -35,6 +36,9 @@ voyager-bottomSheetNavigator = { module = "cafe.adriel.voyager:voyager-bottom-sh
 voyager-tabNavigator = { module = "cafe.adriel.voyager:voyager-tab-navigator", version.ref = "voyager" }
 voyager-transitions = { module = "cafe.adriel.voyager:voyager-transitions", version.ref = "voyager" }
 androidx-animation-android = { group = "androidx.compose.animation", name = "animation-android", version.ref = "animationAndroid" }
+
+# DATA PERSISTENCE
+settings = { module = "com.russhwolf:multiplatform-settings-no-arg", version.ref = "settings-multiplatform"}
 
 [plugins]
 androidApplication = { id = "com.android.application", version.ref = "agp" }
