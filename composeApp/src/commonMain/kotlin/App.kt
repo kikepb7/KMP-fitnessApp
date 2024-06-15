@@ -17,8 +17,7 @@ import cafe.adriel.voyager.core.screen.Screen
 import cafe.adriel.voyager.navigator.LocalNavigator
 import cafe.adriel.voyager.navigator.Navigator
 import cafe.adriel.voyager.transitions.FadeTransition
-import cafe.adriel.voyager.transitions.ScaleTransition
-import cafe.adriel.voyager.transitions.SlideTransition
+import navigation.bottombar.BottomBarScreen
 import org.jetbrains.compose.ui.tooling.preview.Preview
 
 @Composable
@@ -28,8 +27,8 @@ fun App() {
         Navigator(screen = MainScreen()) { navigator ->
             // Transitions
             FadeTransition(navigator = navigator)
-            ScaleTransition(navigator = navigator)
-            SlideTransition(navigator = navigator)
+//            ScaleTransition(navigator = navigator)
+//            SlideTransition(navigator = navigator)
         }
     }
 }
@@ -49,6 +48,16 @@ class MainScreen : Screen {
                 }
             ) {
                 Text("Click me!")
+            }
+
+            Spacer(modifier = Modifier.height(16.dp))
+
+            Button(
+                onClick = {
+                    navigator?.push(item = BottomBarScreen())
+                }
+            ) {
+                Text("BottomBar")
             }
         }
     }
