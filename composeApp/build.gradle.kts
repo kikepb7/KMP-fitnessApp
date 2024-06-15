@@ -7,6 +7,9 @@ plugins {
     alias(libs.plugins.androidApplication)
     alias(libs.plugins.jetbrainsCompose)
     alias(libs.plugins.compose.compiler)
+
+    // Ktor
+    alias(libs.plugins.kotlinxSerialization)
 }
 
 kotlin {
@@ -36,6 +39,9 @@ kotlin {
         androidMain.dependencies {
             implementation(compose.preview)
             implementation(libs.androidx.activity.compose)
+
+            // Ktor
+            implementation(libs.ktor.client.okhttp)
         }
         commonMain.dependencies {
             implementation(compose.runtime)
@@ -54,9 +60,18 @@ kotlin {
 
             // Data Persistence
             implementation(libs.settings)
+
+            // Ktor
+            implementation(libs.ktor.client.core)
+            implementation(libs.ktor.client.negotiation)
+            implementation(libs.kotlin.serialization)
         }
         desktopMain.dependencies {
             implementation(compose.desktop.currentOs)
+        }
+        iosMain.dependencies {
+            // Ktor
+            implementation(libs.ktor.client.darwin)
         }
     }
 }
