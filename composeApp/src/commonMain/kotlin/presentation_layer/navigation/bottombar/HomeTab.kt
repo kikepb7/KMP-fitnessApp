@@ -1,11 +1,11 @@
-package navigation.bottombar
+package presentation_layer.navigation.bottombar
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material.Text
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.Favorite
+import androidx.compose.material.icons.filled.Home
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
@@ -16,18 +16,18 @@ import androidx.compose.ui.unit.sp
 import cafe.adriel.voyager.navigator.tab.Tab
 import cafe.adriel.voyager.navigator.tab.TabOptions
 
-object FavTab : Tab {
+object HomeTab : Tab {
 
     override val options: TabOptions
         @Composable
         get() {
-            val icon = rememberVectorPainter(Icons.Default.Favorite)
+            val icon = rememberVectorPainter(Icons.Default.Home)
 
             // Remember allows us to maintain the state of a view when the views are recomposed
             return remember {
                 TabOptions(
-                    index = 1u,
-                    title = "Fav",
+                    index = 0u,
+                    title = "Home",
                     icon = icon
                 )
             }
@@ -38,11 +38,11 @@ object FavTab : Tab {
         Box(
             modifier = Modifier
                 .fillMaxSize()
-                .background(Color.Red),
+                .background(Color.Black),
             contentAlignment = Alignment.Center
         ) {
             Text(
-                text = "FavScreen",
+                text = "HomeScreen",
                 fontSize = 22.sp,
                 color = Color.White
             )

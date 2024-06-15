@@ -1,4 +1,4 @@
-package navigation.bottombar
+package presentation_layer.navigation.bottombar
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box

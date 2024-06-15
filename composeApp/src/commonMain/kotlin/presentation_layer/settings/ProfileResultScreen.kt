@@ -1,4 +1,4 @@
-package settings
+package presentation_layer.settings
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Column
@@ -14,8 +14,8 @@ import androidx.compose.ui.unit.sp
 import cafe.adriel.voyager.core.screen.Screen
 import cafe.adriel.voyager.navigator.LocalNavigator
 import com.russhwolf.settings.Settings
-import settings.ProfileScreen.Companion.KEY_NAME
-import settings.ProfileScreen.Companion.KEY_VIP
+import presentation_layer.settings.ProfileScreen.Companion.KEY_NAME
+import presentation_layer.settings.ProfileScreen.Companion.KEY_VIP
 
 class ProfileResultScreen : Screen {
 

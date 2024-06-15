@@ -1,4 +1,4 @@
-package navigation.bottombar
+package presentation_layer.navigation.bottombar
 
 import androidx.compose.material.BottomNavigation
 import androidx.compose.material.BottomNavigationItem
@@ -55,7 +55,7 @@ class BottomBarScreen : Screen {
                                     )
                                 }
                             },
-                            onClick = { tabNavigator.current = HomeTab}
+                            onClick = { tabNavigator.current = HomeTab }
                         )
 
                         BottomNavigationItem(
@@ -73,7 +73,7 @@ class BottomBarScreen : Screen {
                                     )
                                 }
                             },
-                            onClick = { tabNavigator.current = FavTab}
+                            onClick = { tabNavigator.current = FavTab }
                         )
 
                         BottomNavigationItem(
@@ -91,7 +91,7 @@ class BottomBarScreen : Screen {
                                     )
                                 }
                             },
-                            onClick = { tabNavigator.current = ProfileTab}
+                            onClick = { tabNavigator.current = ProfileTab }
                         )
                     }
                 },
